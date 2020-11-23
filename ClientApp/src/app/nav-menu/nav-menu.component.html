@@ -1,45 +1,20 @@
 <header>
-  <nav
-    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"
-  >
-    <div class="container">
-      <a class="navbar-brand" [routerLink]="['/']">Clarence</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target=".navbar-collapse"
-        aria-label="Toggle navigation"
-        [attr.aria-expanded]="isExpanded"
-        (click)="toggle()"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div
-        class="navbar-collapse collapse d-sm-inline-flex justify-content-end"
-        [ngClass]="{ show: isExpanded }"
-      >
-        <ul class="navbar-nav flex-grow">
-          <li
-            class="nav-item"
-            [routerLinkActive]="['link-active']"
-            [routerLinkActiveOptions]="{ exact: true }"
-          >
-            <a class="nav-link text-dark" [routerLink]="['/']">Home</a>
-          </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/counter']"
-              >Counter</a
-            >
-          </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/fetch-data']"
-              >Fetch data</a
-            >
-          </li>
-        </ul>
-        <app-login-menu></app-login-menu>
-      </div>
-    </div>
-  </nav>
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="nav-button" aria-label="Home">
+      <mat-icon color="secondary">home</mat-icon>
+    </button>
+    <span>Clarence</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="nav-button" aria-label="account">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <button mat-icon-button class="nav-button" aria-label="Menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-toolbar>
+
 </header>
+
+
+
+
