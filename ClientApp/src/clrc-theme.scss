@@ -1,0 +1,28 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+/* ======== angular material custom theme ======== */
+$clrc-primary: mat-palette($mat-green, 700, 300, 900);
+$clrc-accent: mat-palette($mat-yellow, 100, 500, A100);
+$clrc-warn: mat-palette($mat-lime);
+
+// Light theme
+$clrc-theme: mat-light-theme($clrc-primary, $clrc-accent, $clrc-warn);
+
+// Dark theme
+$clrc-theme: mat-dark-theme($clrc-primary, $clrc-accent, $clrc-warn);
+
+// Main theme definition
+@include angular-material-theme($clrc-theme);
+
+
+// Alternate Angular Material Theme
+.my-alternate-theme {
+     $my-alternate-primary: mat-palette($mat-red);
+     $my-alternate-accent: mat-palette($mat-green, 400);
+     $my-alternate-warn: mat-palette($mat-grey);
+
+     $my-alternate-theme: mat-light-theme($my-alternate-primary, $my-alternate-accent, $my-alternate-warn);
+
+     @include angular-material-theme($my-alternate-theme);
+   }
